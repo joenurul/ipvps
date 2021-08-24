@@ -11,11 +11,6 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
-IZIN=$( curl https://raw.githubusercontent.com/Dimas1441/ipvps/main/Ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-echo -e "${red}Permission Denied!${NC}";
 rm -f setup.sh
 fi
 if [ -f "/etc/v2ray/domain" ]; then
